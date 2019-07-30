@@ -1,10 +1,10 @@
-import request from "supertest";
-import "@babel/polyfill";
-import server from "../sophia-server/server";
-import {mockGoodList, mockBadList, mockBadItem, mockGoodItem} from './utils/mockData/mockData';
+require( "@babel/polyfill");
+const request = require( "supertest");
+const server = require ( "./server");
+
 
 describe("API", () => {
-  let lists, items;
+  let lists, items, mockBadItem, mockBadList, mockGoodItem, mockGoodList;
   beforeEach(() => {
     lists = [
       {
@@ -33,6 +33,22 @@ describe("API", () => {
       }
     ];
     server.locals.items = items;
+
+    mockGoodList = {
+      title: "groceries",
+    };
+    
+    mockBadList = {
+      title: "",
+    };
+    
+    mockGoodItem = {
+      task: "buy milk",
+    };
+    
+    mockBadItem = {
+      task: "",
+    };
   });
   describe("GET /api/v1/lists", () => {
     it("should return a status of 200", () => {
