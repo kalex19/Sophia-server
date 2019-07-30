@@ -39,15 +39,16 @@ describe("API", () => {
     };
     
     mockBadList = {
-      title: "",
+      body: "",
     };
     
     mockGoodItem = {
+      list_id:1,
       task: "buy milk",
     };
     
     mockBadItem = {
-      task: "",
+      body: "",
     };
   });
   describe("GET /api/v1/lists", () => {
@@ -120,12 +121,13 @@ describe("API", () => {
       expect(response.status).toBe(204);
     });
     it("should update the list if successful", async () => {
-      const expected = [{ id: 1, ...mockGoodList }, lists[1]];
+      const expected = { id: 1, title:'new title'};
       expect(server.locals.lists).toEqual(lists);
       const response = await request(server)
         .put("/api/v1/lists/1")
-        .send(mockGoodList);
-      expect(server.locals.lists).toEqual(expected);
+        .send(expected);
+      expect(response).toEqual(expected);
+      expect(server.locals.lists[1]).toEqual(expected);
     });
     it("should return a status of 422 and error message if there is no title", async () => {
       const response = await request(server)
@@ -231,7 +233,7 @@ describe("API", () => {
     it("should return a status of 204 if item is succesfully updated", async () => {
       const response = await request(server)
         .put("/api/v1/items/1")
-        .send(mockGoodItem);
+        .send({id:1, task:'new task', list_id:1,completed:false});
       expect(response.status).toBe(204);
     });
     it("should update the item if successful", async () => {;
