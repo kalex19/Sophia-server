@@ -38,7 +38,7 @@ Clone down this repo, install the dependencies, and start the server. Reminder, 
 The assigned project did not require an express server, 
 however, as an extension, the developer created one using express and a sample database for the associated project:
 
-![Sophia](https://github.com/kalex19/Sophia)
+[Sophia](https://github.com/kalex19/Sophia)
 
 ## Project Successes
 
