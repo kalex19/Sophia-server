@@ -62,7 +62,7 @@ The most difficult part was testing the server due to a lack of experience in te
 
 ## Test Coverage
 
-![Test Coverage](./src/assets/test-coverage.png)
+![Test Coverage](./assets/test-coverage.png)
 
 ## Developer
 
