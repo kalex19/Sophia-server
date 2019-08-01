@@ -51,7 +51,7 @@ The most difficult part was testing the server due to a lack of experience in te
 
 ## Project Extensions/Issues
 
-* 
+* Only 84% test coverage
 
 ## Project Tech Emphasis
 
@@ -62,7 +62,7 @@ The most difficult part was testing the server due to a lack of experience in te
 
 ## Test Coverage
 
-![Test Coverage](./src/images/test-coverage.png)
+![Test Coverage](./src/assets/test-coverage.png)
 
 ## Developer
 
