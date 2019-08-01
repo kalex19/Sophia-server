@@ -2,7 +2,7 @@
 
 ## Table of Contents
 * [Available Scripts](#Available-Scripts)
-* [Set Up](#Set Up)
+* [Set Up](#Set-Up)
 * [Description](#Description)
 * [Project Successes](Project-Successes)
 * [Project Challenges](Project-Challenges)
