@@ -283,6 +283,7 @@ describe("API", () => {
   describe("404 error", () => {
     it('should return a 404 if the route does not exist', async () => {
       const response = await request(server)
+      console.log(response.status);
       expect(response.status).toBe(404);
     });
     it('should return a message if the route does not exist', async () => {
