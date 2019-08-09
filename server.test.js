@@ -129,6 +129,8 @@ describe("API", () => {
       expect(response).toEqual(expected);
       expect(server.locals.lists[1]).toEqual(expected);
     });
+    //always test for correct status and correct payload when give opst request
+    //response.data
     it("should return a status of 422 and error message if there is no title", async () => {
       const response = await request(server)
         .put("/api/v1/lists/1")

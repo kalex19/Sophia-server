@@ -56,6 +56,7 @@ server.put("/api/v1/lists/:id", (req, res) => {
       return res.sendStatus(422);
     }
   }
+  //check to see if 422 even returns a response body
   const listIndex = server.locals.lists.findIndex(l => l.id === id);
   if (listIndex === -1) return res.status(404).json("List not found");
   server.locals.lists.splice(listIndex, 1, list);
